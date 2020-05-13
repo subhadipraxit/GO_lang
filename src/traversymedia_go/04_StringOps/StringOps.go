@@ -17,7 +17,7 @@ func main() {
 	p(s.ReplaceAll(str, "New", "Old"))
 	p(s.TrimSuffix(str, "ng"))
 	p(s.Join(strArray, " is "))
-	//p(s.)
+	//p(s.s)  // for further try
 	//p(s.)
 	//p(s.)
 
