@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 var pt = fmt.Println
@@ -16,7 +17,7 @@ type Person struct {
 
 func (p Person) greet() string {
 
-	return "My name is " + p.lastName + " , " + p.firstName + p.lastName + "," + p.id + " and I work for " + p.company
+	return "My name is " + p.lastName + " , " + p.firstName + p.lastName + "," + strconv.Itoa(p.id) + " and I work for " + p.company
 
 }
 func main() {
