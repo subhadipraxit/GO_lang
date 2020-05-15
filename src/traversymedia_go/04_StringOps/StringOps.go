@@ -9,6 +9,7 @@ var p = fmt.Println
 
 func main() {
 
+	// USE the link for reference : https://gobyexample.com/string-functions
 	p("String Operations : ")
 	var str string = "New String"
 	var strArray = []string{"This", "Separator,", "it?"}
