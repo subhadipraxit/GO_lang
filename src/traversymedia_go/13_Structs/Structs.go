@@ -13,12 +13,27 @@ type Person struct {
 	lastName  string
 	id        int
 	company   string
+
+	// 2nd way to initilize struct filelds
+	//	firstName, lastName, company string
+	//	id                           int
 }
 
+// greeting method : value receiver
 func (p Person) greet() string {
 
 	return "My name is " + p.lastName + " , " + p.firstName + p.lastName + "," + strconv.Itoa(p.id) + " and I work for " + p.company
 
+}
+
+// change id : Pointer receiver
+func (p *Person) chnageID() {
+	p.id++
+}
+
+// switch company : Pointer receiver
+func (p *Person) switchCompany(s string) {
+	p.company = s
 }
 func main() {
 
@@ -31,4 +46,17 @@ func main() {
 
 	pt(p2.greet())
 
+	p.chnageID()
+	pt(p.greet())
+	p.switchCompany("NYPD")
+	pt(p.greet())
+
+	q := Person{firstName: "QQ", lastName: "qq", id: 9, company: "Mi6"}
+
+	pt(q.firstName, q.lastName, q.id)
+
+	q_ptr := &q
+	q_ptr.firstName = "JJ"
+
+	pt(q)
 }
